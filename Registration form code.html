@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+           background-image: url('https://73ipc.com/registration/assets/img/studentregistration.jpeg');
+
+            padding: 20px;
+        }
+         .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color:			#20B2AA;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="checkbox"], 
+        .form-group input[type="radio"] {
+            width: auto;
+        }
+        .form-group .checkbox-group,
+        .form-group .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .form-group .checkbox-group label,
+        .form-group .radio-group label {
+            margin-right: 15px;
+        }
+        .form-group button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color:			#7CFC00;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color:			#7CFC00;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Registration Form</h2>
+    <form action="submit_form.php" method="post">
+        <!-- Name -->
+        <div class="form-group">
+            <label for="name">User Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <!-- Password -->
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        
+        <!-- Gender -->
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female" required> Female</label>
+                <label><input type="radio" name="gender" value="other" required> Other</label>
+            </div>
+        </div>
+
+<div class="form-group">
+<label>Phone.No:</label>
+ <input id="telNo" name="telNo" type="tel" size="10" />
+    </div>
+      
+        <!-- Hobbies -->
+        <div class="form-group">
+            <label>Hobbies</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="interests" value="sports"> Sports</label>
+                <label><input type="checkbox" name="interests" value="music"> Music</label>
+                <label><input type="checkbox" name="interests" value="movies"> Movies</label>
+                <label><input type="checkbox" name="interests" value="reading"> Reading</label>
+            </div>
+        </div>
+        
+        <!--Profession -->
+        <div class="form-group">
+            <label for="Profession">Profession</label>
+            <select id="Profession" name="Profession" required>
+                <option value="">Select your Profession</option>
+                <option value="Student">Student</option>
+                <option value="Employee">Employee</option>
+                <option value="Worker">Worker</option>
+                <option value="Business">Business</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+        
+        <!-- Address -->
+        <div class="form-group">
+            <label for="bio">Address</label>
+            <textarea id="Address" name="Address" rows="4" required></textarea>
+        </div>
+        
+        <!-- Submit Button -->
+        <div class="form-group">
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
